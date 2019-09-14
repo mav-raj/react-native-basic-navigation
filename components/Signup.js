@@ -9,7 +9,7 @@ export default class Signup extends Component {
     return (
       <View style={styles.container}>
         <Text>Signup Screen</Text>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('MainScreen')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('AppStack')}>
           <Text style={{ color: 'blue', textDecorationLine: 'underline' }}>User Signups with email</Text>
         </TouchableOpacity>
       </View>

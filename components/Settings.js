@@ -6,7 +6,16 @@ import {
   BackHandler
 } from "react-native";
 
+import { createStackNavigator } from 'react-navigation';
+
+// Components Import
+import UpdatePasswordComponent from './UpdatePassword';
+import ViewProfileComponent from './ViewProfile';
+
 class Settings extends Component {
+  static navigationOptions = {
+    title: 'Settings'
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -21,7 +30,13 @@ class Settings extends Component {
     BackHandler.removeEventListener('hardwareBackPress', () => true);
   }
 }
-export default Settings;
+// export default Settings
+export default createStackNavigator(
+  {
+    Settings: Settings
+  }
+
+);
 
 const styles = StyleSheet.create({
   container: {

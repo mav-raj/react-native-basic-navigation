@@ -3,28 +3,29 @@ import {
   View,
   Text,
   StyleSheet,
+  BackHandler,
   TouchableOpacity
 } from "react-native";
-import { createStackNavigator, NavigationActions } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
-class Search extends Component {
+class UpdatePassword extends Component {
   static navigationOptions = {
-    title: 'Search'
+    title: 'Update Password'
   }
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate("Settings")}>
-          <Text>settings</Text>
+        <Text>UpdatePassword</Text>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
+          <Text style={{ color: 'blue', textDecorationLine: 'underline' }}>Password get updated</Text>
         </TouchableOpacity>
-        <Text>Search</Text>
-      </View >
+      </View>
     );
   }
 }
 export default createStackNavigator(
   {
-    Search: Search
+    UpdatePassword: UpdatePassword
   }
 );
 

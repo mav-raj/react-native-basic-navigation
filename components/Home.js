@@ -49,7 +49,12 @@ class Home extends Component {
 export default createStackNavigator(
   {
     Home: Home
+  }, {
+  //to hide label of home in drawer
+  navigationOptions: {
+    drawerLabel: () => null
   }
+}
 );
 
 const styles = StyleSheet.create({

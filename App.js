@@ -6,13 +6,15 @@ import {
   View,
   Text
 } from 'react-native';
-import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 // Components Import
-import LoginSignupOptionComponent from './components/LoginSignupOption';
-import LoginComponent from './components/Login';
-import SignupComponent from './components/Signup';
-import MainComponent from './components/Main';
+// import LoginSignupOptionComponent from './components/LoginSignupOption';
+// import LoginComponent from './components/Login';
+// import SignupComponent from './components/Signup';
+// import MainComponent from './components/Main';
+import AuthStack from './components/AuthStack'
+import AppStack from './components/AppStack'
 
 // export default class App extends Component {
 
@@ -27,12 +29,11 @@ const styles = StyleSheet.create({
 
 });
 
-const AppStackNavigator = createStackNavigator(
+const AppSwitchNavigator = createSwitchNavigator(
   {
-    LoginSignupOptionScreen: LoginSignupOptionComponent,
-    LoginScreen: LoginComponent,
-    SignupScreen: SignupComponent,
-    MainScreen: MainComponent,
+    // Add flash screen here
+    AuthStack: AuthStack,
+    AppStack: AppStack
   },
   {
     navigationOptions: {
@@ -41,4 +42,4 @@ const AppStackNavigator = createStackNavigator(
   }
 );
 
-export default AppContainer = createAppContainer(AppStackNavigator);
+export default AppContainer = createAppContainer(AppSwitchNavigator);

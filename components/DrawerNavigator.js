@@ -3,19 +3,18 @@ import { createDrawerNavigator } from 'react-navigation';
 
 // Components Import
 import HomeComponent from './Home';
-import SettingsComponent from './Settings';
-import ViewProfileComponent from './ViewProfile';
+import DrawerContent from './DrawerContent';
 
 export default DrawerNavigator = createDrawerNavigator(
   {
-    Home: HomeComponent,
-    Settings: SettingsComponent,
-    ViewProfile: ViewProfileComponent,
+    Home: HomeComponent
   },
   {
+    contentComponent: DrawerContent,
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
     }
-  }
+  },
+
 );

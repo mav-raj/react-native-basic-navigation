@@ -9,7 +9,7 @@ export default class Login extends Component {
     return (
       <View style={styles.container}>
         <Text>Login Screen</Text>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('MainScreen')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('AppStack')}>
           <Text style={{ color: 'blue', textDecorationLine: 'underline' }}>User Loggs In</Text>
         </TouchableOpacity>
       </View>
