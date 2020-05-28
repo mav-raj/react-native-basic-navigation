@@ -1,7 +1,7 @@
 # react-native-basic-navigation
 React native basic navigation.
 
-This repo is just for beginers who are new to react-navigation.
+This repo is just for beginers who are new to react-navigation (v3.12.1).
 This repo contains example containing a navigation flow of app containing bottom tab and drawer-navigator. Also using redux for implementing dark theme in react-navigation
 
 App.js (SWITCH-NAVIGATOR)<br />
